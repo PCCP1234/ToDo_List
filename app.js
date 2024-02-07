@@ -1,17 +1,19 @@
 'use strict';
 
+// Get de data in localStorage and tranform in JSON format.
 const getData = () => JSON.parse(localStorage.getItem ('todoList')) ?? [];
+// Insert the data in localStorage e transform in STRING.
 const setData = (data) => localStorage.setItem('todoList', JSON.stringify(data));
 
+
+// Add new task to the list
 const newItem = (task, status, index) => {
-    
     const item = document.createElement('label');
     item.classList.add('todo_item');
     item.innerHTML = `
     <input type="checkbox" ${status} data-index=${index}>
     <div>${task}</div>
-    <input type="button" value="x" data-index=${index}>`
-
+    <input type="button" value="x" data-index=${index}>`;
     document.getElementById('todoList').appendChild(item);
 }
 

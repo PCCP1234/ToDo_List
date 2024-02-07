@@ -96,11 +96,6 @@ body {
     margin: 10px;
     font: inherit;
     border: 2px solid black;
-    text-align: center;
-}
-
-#newItem::placeholder {
-    text-align: center; 
 }
 
 .todo_new_item > input{
@@ -110,6 +105,7 @@ body {
     outline: none;
     font: inherit;
     text-align: center;
+}
 
 .todo_new_item > input::placeholder {
     font-style: italic;
