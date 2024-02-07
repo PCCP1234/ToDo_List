@@ -1,17 +1,10 @@
 'use strict';
 
-/* <label class="todo_item">
-                <input type="checkbox">
-                <div>teste de item 2</div>
-                <input type="button" value="x">
-            </label> */
-
-let data = [
-    {'task': 'Estudar JS', 'status': ''},
-    {'task': "netflix", "status": 'checked'}
-];
+const getData = () => JSON.parse(localStorage.getItem ('todoList')) ?? [];
+const setData = (data) => localStorage.setItem('todoList', JSON.stringify(data));
 
 const newItem = (task, status, index) => {
+    
     const item = document.createElement('label');
     item.classList.add('todo_item');
     item.innerHTML = `
@@ -31,14 +24,18 @@ const cleanTasks = () => {
 
 const render = () => {
     cleanTasks();
+    const data = getData();
     data.forEach ((item, index) => newItem(item.task, item.status, index));
 }
 
 const insertItem = (event) => {
+    
     const key = event.key;
     const input = event.target.value;
     if( key === 'Enter'){
+        const data = getData();
         data.push({'task': input, 'status': ''});
+        setData(data);
         render();
         event.target.value = '';
     }
@@ -48,12 +45,16 @@ const insertItem = (event) => {
 }
 
 const removeItem = (index) => {
+    const data = getData();
     data.splice (index, 1);
+    setData(data);
     render();
 }
 
 const updateItem = (index) => {
+    const data = getData();
     data[index].status = data[index].status === '' ? 'checked' : '';
+    setData(data);
     render();
 }
 
