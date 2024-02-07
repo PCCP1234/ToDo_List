@@ -1,4 +1,4 @@
-# ✅ ToDo - List ✅ - (Work in Progress)
+# ✅ To_Do - List ✅ - (Work in Progress)
 
 This is an ongoing to-do list project, created to help users organize their daily tasks.
 
