@@ -22,8 +22,34 @@ const newItem = (task, status) => {
     document.getElementById('todoList').appendChild(item);
 }
 
+const cleanTasks = () => {
+    const todoList = document.getElementById('todoList')
+    while (todoList.firstChild) {
+        todoList.removeChild(todoList.lastChild);
+    }
+}
+
 const render = () => {
+    cleanTasks();
     data.forEach (item => newItem(item.task, item.status));
 }
 
+const insertItem = (event) => {
+    const key = event.key;
+    const input = event.target.value;
+    if( key === 'Enter'){
+        data.push({'task': input, 'status': ' '});
+        render();
+    }
+    
+    console.log(key);
+
+}
+
+document.getElementById('newItem').addEventListener('keypress', insertItem);
+
 render();
+
+
+
+
