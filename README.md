@@ -1,8 +1,8 @@
-# ✅ To_Do - List ✅ - (Work in Progress)
+# ✅ To_Do - List ✅
 
 This is an ongoing to-do list project, created to help users organize their daily tasks.
 
-### Prerequisites
+### Pre-requisites
 
 Make sure you have Visual Studio Code installed on your machine.
 Install the Live Server extension for Visual Studio Code.
@@ -13,11 +13,12 @@ Install the Live Server extension for Visual Studio Code.
 2. Run 'npm install' to install the dependencies.
 3. Run 'npm start' to start the development server.
 
-## 🎮 How it works
+## 🎮 How to Use
 
-1. Open the Trivia Quiz App in your browser.
-2. Select a category and difficulty level.
-3. Answer the questions by clicking on the provided options.
+1. Open the application in your web browser.
+2. Write the task in "Insert new task" and click "Enter" to add it to the list.
+3. Mark tasks as completed by clicking the checkbox next to them.
+4. To delete click on "X".
 
 ## ⌨️ Contributing
 
